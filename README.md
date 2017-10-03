@@ -1,3 +1,3 @@
 # leetcode
 
-思考的乐趣，刷题无乐趣。
+1.[C++的链表专题系列])(https://segmentfault.com/a/1190000002490878), 主要内容包括reverse,insert,sorted,merge,duplicate.
