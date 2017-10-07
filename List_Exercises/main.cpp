@@ -122,24 +122,33 @@ void insertSort(ListNode** headRef){
 	//TODO
 }
 
+ListNode* getIntersectionNode(ListNode* headA, ListNode* headB){
+	ListNode* curA = headA;
+	ListNode* curB = headB;
+	while(curA != curB){
+		curA = curA? curA->next : headB;
+		curB = curB? curB->next : headA;
+	}	
+	return curA;
+}
 int main(){
 	
-	int _l2[] = {7,8,9};
+	int _l2[] = {7,8,9,1,2,3};
 	int _l1[] = {1,2,3};
 	ListNode* l1 = nullptr;
 	ListNode* l2 = nullptr;
-       	ListNode* result = nullptr;
-	ListNode* l3 = nullptr;
 	createList(l1, _l1, sizeof(_l1)/sizeof(_l1[0]));
 	createList(l2, _l2, sizeof(_l2)/sizeof(_l2[0]));
-	moveNode(&l1,&l2);
+	
+	//moveNode(&l1,&l2);
 	//deleteDup(l1);
 	//l3=reverse(l2);
-	Solution slu;
+	//Solution slu;
 	//result = slu.mergeTwoLists(l1, l2);
 	
+	
 	ListNode* p = nullptr;
-	p = l1;
+	p = getIntersectionNode(l2, l1);
 	while(p){
 		cout << p -> val << " ";
 		p = p ->next;
