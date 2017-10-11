@@ -131,15 +131,36 @@ ListNode* getIntersectionNode(ListNode* headA, ListNode* headB){
 	}	
 	return curA;
 }
+
+bool isParlindrome(ListNode* head){
+	//链表为空或者只有一个元素
+	if(head == NULL || head->next == NULL){return true;}
+	//链表元素个数>=2
+	ListNode* slow = head;
+	ListNode* fast = head;
+	while(fast->next != NULL && fast->next->next != NULL){
+		slow = slow->next;
+		fast = fast->next->next;
+	}
+	slow->next = reverse(slow->next);
+	slow = slow->next;
+	while(slow != NULL){
+		if(head->val != slow->val){return false;}
+		head = head->next;
+		slow = slow->next;
+	}
+	return true;
+}
+
 int main(){
 	
 	int _l2[] = {7,8,9,1,2,3};
-	int _l1[] = {1,2,3};
+	int _l1[] = {1,2};
 	ListNode* l1 = nullptr;
 	ListNode* l2 = nullptr;
 	createList(l1, _l1, sizeof(_l1)/sizeof(_l1[0]));
 	createList(l2, _l2, sizeof(_l2)/sizeof(_l2[0]));
-	
+	cout << "isParlindrome: " << isParlindrome(l1);	
 	//moveNode(&l1,&l2);
 	//deleteDup(l1);
 	//l3=reverse(l2);
@@ -147,12 +168,12 @@ int main(){
 	//result = slu.mergeTwoLists(l1, l2);
 	
 	
-	ListNode* p = nullptr;
-	p = getIntersectionNode(l2, l1);
-	while(p){
-		cout << p -> val << " ";
-		p = p ->next;
-	}
-	cout << endl;
+	//ListNode* p = nullptr;
+	//p = getIntersectionNode(l2, l1);
+	//while(p){
+	//	cout << p -> val << " ";
+	//	p = p ->next;
+	//}
+	//cout << endl;
 	return 0;
 }
