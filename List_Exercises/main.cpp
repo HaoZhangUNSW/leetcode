@@ -99,8 +99,11 @@ void sortedInsert0(ListNode** headRef, ListNode* newNode){
 	}
 }
 void sortedInsert1(ListNode** headRef, ListNode* newNode){
+	
+	//可以利用成员函数，有不同的表达方式
 	ListNode dummy(0), *tail = &dummy;
 	dummy.next = *headRef;
+	
 	while(tail -> next != nullptr && tail->next->val < newNode->val)
 		tail = tail->next;
 	newNode->next = tail->next;
@@ -152,6 +155,25 @@ bool isParlindrome(ListNode* head){
 	return true;
 }
 
+ListNode* removeNthFromEnd(ListNode* head, int n){
+	if (!head){return nullptr;}
+	//class member
+	ListNode new_head(-1);
+	new_head.next = head;
+
+	ListNode* slow = &new_head, *fast = &new_head;
+	for(int i = 0;i < n;i++){fast = fast->next;}
+	while(fast->next){
+		fast = fast->next;
+		slow = slow->next;	
+	}
+	//使用指针显式删除
+	ListNode* to_be_deleted = slow->next;
+	slow->next = slow->next->next;
+	delete to_be_deleted;
+	return new_head.next;
+}
+
 int main(){
 	
 	int _l2[] = {7,8,9,1,2,3};
@@ -160,7 +182,9 @@ int main(){
 	ListNode* l2 = nullptr;
 	createList(l1, _l1, sizeof(_l1)/sizeof(_l1[0]));
 	createList(l2, _l2, sizeof(_l2)/sizeof(_l2[0]));
-	cout << "isParlindrome: " << isParlindrome(l1);	
+	//cout << "isParlindrome: " << isParlindrome(l1);	
+	
+	
 	//moveNode(&l1,&l2);
 	//deleteDup(l1);
 	//l3=reverse(l2);
@@ -168,12 +192,13 @@ int main(){
 	//result = slu.mergeTwoLists(l1, l2);
 	
 	
-	//ListNode* p = nullptr;
+	ListNode* p = nullptr;
 	//p = getIntersectionNode(l2, l1);
-	//while(p){
-	//	cout << p -> val << " ";
-	//	p = p ->next;
-	//}
+	p = removeNthFromEnd(l2,3);
+	while(p){
+		cout << p -> val << " ";
+		p = p ->next;
+	}
 	//cout << endl;
 	return 0;
 }
