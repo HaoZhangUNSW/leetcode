@@ -9,3 +9,5 @@
 3.[牛顿迭代法](http://blog.punkid.org/2008/02/28/compute-the-square-root-via-newtons-iteration/),用来求平方根，包含简单推导和泰勒公式推导两块。
 
 4.[一个RE错误的代码示例](http://blog.csdn.net/jessir/article/details/60881012)
+
+5.[最美数据结构-并查集](https://zh.wikipedia.org/wiki/%E5%B9%B6%E6%9F%A5%E9%9B%86#.E8.B7.AF.E5.BE.84.E5.8E.8B.E7.BC.A9)
