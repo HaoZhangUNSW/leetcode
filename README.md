@@ -21,3 +21,5 @@
 8.[前缀和，前缀积的三道题目](http://www.cnblogs.com/AndyJee/p/4474073.html)
 
 9.[树状数组](https://zh.wikipedia.org/wiki/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84)
+
+10.[Leetcode中的大整数问题](http://www.voidcn.com/article/p-pstqxxeb-qc.html)
