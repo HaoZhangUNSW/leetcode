@@ -27,3 +27,5 @@
 11.[背包问题](http://blog.csdn.net/lyhvoyage/article/details/8545852)
 
 《背包九讲》
+
+12.[C++ STL之哈希表](http://www.sczyh30.com/posts/C-C/cpp-stl-hashmap/)
