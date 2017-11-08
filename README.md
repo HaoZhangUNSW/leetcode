@@ -1,6 +1,5 @@
 # leetcode
 
-不能因为过分关注答案，而忽视思考问题的方法。
 
 1.[C++的链表专题系列](https://segmentfault.com/a/1190000002490878), 主要内容包括reverse,insert,sorted,merge,duplicate.
 
@@ -29,3 +28,40 @@
 《背包九讲》
 
 12.[C++ STL之哈希表](http://www.sczyh30.com/posts/C-C/cpp-stl-hashmap/)
+
+13.[二维数组查找的测试用例设计](http://www.cnblogs.com/edisonchou/p/4737944.html)
+
+具体设计：target在数组中，target不在数组中，target是数组中最小的数，target是数组中最大的数，target比数组中最小的数还小，target比数组中最大的数还大，输入空指针(鲁棒性测试)。
+
+14.[Edison Chou的关于剑指Offer的部分题目的博客，设计了测试用例](http://www.cnblogs.com/edisonchou/category/625054.html)
+
+15.[多源最短路径: Floyd-Warshall算法](http://wiki.jikexueyuan.com/project/easy-learn-algorithm/floyd.html)
+
+时间复杂度是N^3，不能处理"负权环"(可能每转一圈，路程都会更短一些，取决于边和是否大于0)。代码只有五行!!!!思想(dp)：从i顶点到j顶点只经过前k顶点的最短路程。
+
+16.[求二叉树深度，递归和非递归的方式](http://blog.csdn.net/beitiandijun/article/details/41930583)
+
+按层遍历的时候，记录遍历的层数。
+
+17.[最长递增子序列](http://www.ahathinking.com/archives/117.html)
+
+给出了好多思路。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
