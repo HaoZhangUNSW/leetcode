@@ -47,10 +47,14 @@
 
 给出了好多思路。
 
+18.[Matrix67的Blog](http://www.matrix67.com/)
+
+19.[合并K个有序数组的最小堆算法](http://blog.csdn.net/u012328476/article/details/52522900)
+
+20.[关于Dijkstra算法和其他的一些图算法(Johnson, Floyd-Warshall, A*)解决最短路径的问题的方法的Python实现](https://zhuanlan.zhihu.com/p/30818986)
 
 
-
-
+21.[关于动态规划的分析，装饰器函数和经典问题(LCS, DAG, 背包问题， 序列对比，最优搜索树)解决方案的Python实现](https://zhuanlan.zhihu.com/p/30738846)
 
 
 
