@@ -29,7 +29,12 @@
 
 12.[C++ STL之哈希表](http://www.sczyh30.com/posts/C-C/cpp-stl-hashmap/)
 
+[Bloom Filter的原理](http://blog.csdn.net/hguisu/article/details/7866173)
+
+[一致性哈希](http://blog.csdn.net/cywosp/article/details/23397179/)
+
 13.[二维数组查找的测试用例设计](http://www.cnblogs.com/edisonchou/p/4737944.html)
+
 
 具体设计：target在数组中，target不在数组中，target是数组中最小的数，target是数组中最大的数，target比数组中最小的数还小，target比数组中最大的数还大，输入空指针(鲁棒性测试)。
 
@@ -57,11 +62,30 @@
 21.[关于动态规划的分析，装饰器函数和经典问题(LCS, DAG, 背包问题， 序列对比，最优搜索树)解决方案的Python实现](https://zhuanlan.zhihu.com/p/30738846)
 
 
+22.[数组中第K大的数](http://www.cnblogs.com/fengkang1008/p/4727038.html)
 
+总结了解决该问题的很多方法。但是个人最喜欢用QuickSorted的思想来解决。
 
+23.[数组中第K大的数-Blog](https://www.cnblogs.com/grandyang/p/4539757.html)
 
+24.**尺取法**的几道题目:[Gas Station](http://www.jianshu.com/p/64abe526fe91),
 
+[Minimum Window Substring](http://blog.csdn.net/ljhandlwt/article/details/52626821)
 
+[尺子覆盖点的数目](http://blog.csdn.net/qingen1/article/details/12358585)
+
+(这道题目百度问过。)
+
+25.[N!的最后一位非零数字](http://blog.csdn.net/rappy/article/details/1903360)需要考虑N!不可计算的场景。
+
+26.[IP地址和整数相互转换](http://blog.csdn.net/zhihaoma/article/details/51841169)
+(百度)
+
+27.[完全二叉树的底层最右节点](https://www.cnblogs.com/qieerbushejinshikelou/p/3917019.html)
+
+给出了递归版本和非递归版本。[完全二叉树插入一个节点](http://www.cppblog.com/luyulaile/archive/2011/02/15/140067.html)
+
+28.[尺子覆盖多少点？](http://blog.csdn.net/qingen1/article/details/12358585)
 
 
 
