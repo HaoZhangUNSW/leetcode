@@ -87,7 +87,9 @@
 
 28.[尺子覆盖多少点？](http://blog.csdn.net/qingen1/article/details/12358585)
 
+29.[排序二叉树转换成双向链表](http://blog.csdn.net/l_tudou/article/details/51753921)
 
+给出了两种思路。
 
 
 
