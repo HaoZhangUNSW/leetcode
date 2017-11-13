@@ -91,7 +91,15 @@
 
 给出了两种思路。
 
+30.[二叉树的三种遍历方法-递归和非递归](http://blog.csdn.net/ns_code/article/details/12977901/)
 
+31.[KD树算法之详细篇](https://zhuanlan.zhihu.com/p/23966698)
+
+这篇Blog给出了详细的建树过程和利用树结构进行K近邻查询的过程。
+
+[k-d tree算法](http://www.cnblogs.com/eyeszjwang/articles/2429382.html)
+
+这篇Blog给出了kd树较理论的分析，同时给出了部分伪代码。
 
 
 
