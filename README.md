@@ -103,5 +103,9 @@
 
 32.[二叉查找树转为有序双向链表的递归过程分析](http://www.leoox.com/?p=137)
 
+33.[递归函数引用参数对工作栈大小影响的分析](http://blog.csdn.net/zhhz418418/article/details/8973748)
 
+34.[基于贪心算法的几类区间覆盖问题](http://blog.csdn.net/chenguolinblog/article/details/7882316)
+
+区间完全覆盖问题，最大不相交覆盖，区间选点问题。
 
