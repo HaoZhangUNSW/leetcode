@@ -1,8 +1,14 @@
+/**
+ *	desc: minimum path sum#64
+ *	author: zhpmatrix
+ */
+
 #include <iostream>
 #include <vector>
 #include <algorithm>
 using namespace std;
 
+/** dp idea **/
 int minPathSum(vector<vector<int> >& grid){
 	const int rows = grid.size();
 	const int cols = grid[0].size();
@@ -18,6 +24,20 @@ int minPathSum(vector<vector<int> >& grid){
 }
 
 
+int findPath(vector<vector<int> >& grid, int rowIdx, int colIdx){
+	if(rowIdx == 0 && colIdx == 0){return grid[rowIdx][colIdx];}
+	if(rowIdx == 0){return findPath(grid, 0, colIdx -1) + grid[0][colIdx];}
+	if(colIdx == 0){return findPath(grid, rowIdx - 1, 0) + grid[rowIdx][0];}
+	return min(findPath(grid, rowIdx - 1, colIdx), findPath(grid, rowIdx, colIdx - 1)) + grid[rowIdx][colIdx];
+}
+
+/** recursive search **/
+int minPathSum1(vector<vector<int> >& grid){
+	int rows = grid.size();
+	int cols = grid[0].size();
+	return findPath(grid, rows-1, cols-1);
+}
+
 int main(){
 	const int rows = 3, cols = 3;
 	int grid[][cols] = {1, 3, 1,
@@ -29,6 +49,6 @@ int main(){
 			_grid[i][j] = grid[i][j];
 		}
 	}
-	cout << minPathSum(_grid) << endl;
+	cout << minPathSum1(_grid) << endl;
 	return 0;
 }
