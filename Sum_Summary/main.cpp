@@ -68,24 +68,60 @@ int threeSumClosest(vector<int>& nums, int target){
 	return closest;
 }
 
+vector<vector<int> > fourSum(vector<int>& nums, int target){
+	vector<vector<int> >rst;
+	sort(nums.begin(), nums.end());
+	int size = nums.size();
+	for(int i = 0;i < size;i++){
+		int t3 = target-nums[i];
+		for(int j = i + 1;j < size;j++){
+			int t2 = t3 - nums[j];
+			int front = j + 1;
+			int back = size - 1;
+			while(front < back){
+				int curSum = nums[front] + nums[back];
+				if(curSum < t2){front++;}
+				else if(curSum > t2){back--;}
+				else{
+					vector<int> tmpRst(4,0);
+					tmpRst[0] = nums[i];
+					tmpRst[1] = nums[j];
+					tmpRst[2] = nums[front];
+					tmpRst[3] = nums[back];
+					rst.push_back(tmpRst);
+					while(front < back && nums[front] == tmpRst[2]){front++;}	
+					while(front < back && nums[back] == tmpRst[3]){back--;}	
+				
+				}
+			}
+			//duplicate idx2
+			while(j+1 < size && nums[j+1] == nums[j]){j++;}	
+		}	
+	
+	//duplicate idx1
+	while(i+1 < size && nums[i+1] == nums[i]){i++;}	
+	}
+	return rst;
+}
+
 
 int main(){
 	//int a[] = {2, 7, 11, 15};int target = 9;
 	//vector<int> nums(a, a + sizeof(a)/sizeof(a[0]));
 	//vector<int> rst = twoSum(nums, target);
 	
-	//int b[] = {-1, 0, 1, 2, -1, -4};
-	//vector<int> nums(b, b + sizeof(b)/sizeof(b[0]));
-	//vector<vector<int> >rst = threeSum(nums);
+	int b[] = {1, 0, -1, 0, -2, 2};int target = 0;
+	vector<int> nums(b, b + sizeof(b)/sizeof(b[0]));
+	vector<vector<int> >rst = fourSum(nums, target);
 	
-	//for(auto& elem0: rst){
-	//	for(auto& elem1: elem0){	
-	//		cout << elem1 << endl;
-	//	}
-	//}
+	for(auto& elem0: rst){
+		for(auto& elem1: elem0){	
+			cout << elem1 << endl;
+		}
+	}
 
-	int c[] = {1, 1, 1, 0};int target = 1;
-	vector<int> nums(c, c + sizeof(c)/sizeof(c[0]));
-	cout << threeSumClosest(nums, target) << endl;	
+	//int c[] = {1, 1, 1, 0};int target = 1;
+	//vector<int> nums(c, c + sizeof(c)/sizeof(c[0]));
+	//cout << threeSumClosest(nums, target) << endl;	
 	return 0;
 }
