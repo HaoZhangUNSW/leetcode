@@ -1,9 +1,16 @@
+/**
+ *	desc: editing distance with dynamic programming
+ *	author: zhpmatrix
+ *	date: 2017-11-21
+ */
+
 #include <iostream>
 #include <string>
 #include <vector>
 #include <algorithm>
 using namespace std;
 
+/** dp idea **/
 int minDistance(string& word1, string& word2){
 	int word1Len = word1.length();
 	int word2Len = word2.length();
