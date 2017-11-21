@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <unordered_map>
 using namespace std;
 
 vector<int> twoSum(vector<int>& nums, int target){
@@ -104,24 +105,45 @@ vector<vector<int> > fourSum(vector<int>& nums, int target){
 	return rst;
 }
 
+int fourSumCount(vector<int>& A, vector<int>& B, vector<int>& C, vector<int>& D){
+	unordered_map<int, int> hash;
+	for(auto& a: A){
+		for(auto& b: B){
+			hash[a+b]++;
+		}
+	}
+	int count = 0;
+	for(auto& c:C){
+		for(auto& d:D){
+			auto it = hash.find(0 - c - d);
+			if(it != hash.end()){count += it->second;}
+		}
+	}
+	return count;
+}
 
 int main(){
 	//int a[] = {2, 7, 11, 15};int target = 9;
 	//vector<int> nums(a, a + sizeof(a)/sizeof(a[0]));
 	//vector<int> rst = twoSum(nums, target);
 	
-	int b[] = {1, 0, -1, 0, -2, 2};int target = 0;
-	vector<int> nums(b, b + sizeof(b)/sizeof(b[0]));
-	vector<vector<int> >rst = fourSum(nums, target);
+	//int b[] = {1, 0, -1, 0, -2, 2};int target = 0;
+	//vector<int> nums(b, b + sizeof(b)/sizeof(b[0]));
+	//vector<vector<int> >rst = fourSum(nums, target);
 	
-	for(auto& elem0: rst){
-		for(auto& elem1: elem0){	
-			cout << elem1 << endl;
-		}
-	}
+	//for(auto& elem0: rst){
+	//	for(auto& elem1: elem0){	
+	//		cout << elem1 << endl;
+	//	}
+	//}
 
 	//int c[] = {1, 1, 1, 0};int target = 1;
 	//vector<int> nums(c, c + sizeof(c)/sizeof(c[0]));
 	//cout << threeSumClosest(nums, target) << endl;	
+	int a[] = {1,2};vector<int>_a(a, a + 2);
+	int b[] = {-2,-1};vector<int>_b(b, b + 2);
+	int c[] = {-1,2};vector<int>_c(c, c + 2);
+	int d[] = {0,2};vector<int>_d(d, d + 2);
+	cout << fourSumCount(_a, _b, _c, _d) << endl;
 	return 0;
 }
