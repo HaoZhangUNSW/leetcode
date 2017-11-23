@@ -109,3 +109,11 @@
 
 区间完全覆盖问题，最大不相交覆盖，区间选点问题。
 
+35.[尾调用优化](http://www.ruanyifeng.com/blog/2015/04/tail-call.html)
+
+讲了尾调用的原理，如何将一般递归转换为尾递归？
+
+36.[递归算法转换为非递归算法的技巧](https://mp.weixin.qq.com/s?__biz=MzA5ODUxOTA5Mg==&mid=2652556683&idx=2&sn=5692497d7b3d352e428be81e73f2ee08&chksm=8b7e3cd0bc09b5c67cc9b557785607f552defdcff0084297dafc4d8ba9c6e9ee8231a18685a5&mpshare=1&scene=1&srcid=1122HbnVa5L18L5MtmzspUqi&key=3c4368fbfacb90f6c4cadce6ea5c67f92e6e756c8854394bb32b42b34bce948a1f8d4d552b74a78e992e3c20edf67c50e9845b93de483df5b344f7ef091a76cc30a637e15fc8c4f1d66732b94468e6ce&ascene=0&uin=MTg2NTIxNzUxNw%3D%3D&devicetype=iMac+MacBookAir7%2C2+OSX+OSX+10.12.6+build(16G29)&version=11020201&pass_ticket=5%2FHbNTzhdkF1OGDmK4ftv4YVskXiezj8KnXUz8AdKgPlHSeKGmHjUaM2rfxMsLQ9)
+
+快速排序的递归写法转换为非递归写法，参照二叉树的先序遍历的非递归的写法。
+这篇文章中的快排的写法和王道考研中的貌似一样，不过都是我喜欢的代码，相比于剑指Offer中的代码，这个很棒。
