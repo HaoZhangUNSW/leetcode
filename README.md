@@ -1,3 +1,4 @@
+
 # leetcode
 
 
@@ -22,6 +23,8 @@
 9.[树状数组](https://zh.wikipedia.org/wiki/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84)
 
 10.[Leetcode中的大整数问题](http://www.voidcn.com/article/p-pstqxxeb-qc.html)
+
+Rosen的《离散数学及其应用》中大整数的计算机算术运算章节讲了一种利用中国剩余定理的方式。比之基于字符串的方式，该方式虽然可以处理大整数，但是大整数范围有限，故没有从本质上解决大整数的运算问题，但是如果给定大整数范围，可以采用这种方案，基于mod的并行计算很棒。
 
 11.[背包问题](http://blog.csdn.net/lyhvoyage/article/details/8545852)
 
