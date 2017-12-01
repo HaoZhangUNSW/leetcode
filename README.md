@@ -126,3 +126,11 @@ Rosen的《离散数学及其应用》中大整数的计算机算术运算章节
 这篇blog的想法适用于二叉排序树，当然如果是基于二叉排序树，可以这样想：如果当前节点的值在两个节点之间，则返回当前节点。如果当前节点的值大于两个节点，在当前节点的左子树上寻找；如果小于两个节点，在当前节点的右子树上寻找。
 
 38.[子集树和排列树](http://www.cnblogs.com/diegodu/p/3805669.html)
+
+39.[KMP算法](http://www.ruanyifeng.com/blog/2013/05/Knuth%E2%80%93Morris%E2%80%93Pratt_algorithm.html)
+
+建立一个部分匹配表：表示一个字符串中头部和尾部子字符串的相同。
+
+[Boyer-Moore算法](http://www.ruanyifeng.com/blog/2013/05/boyer-moore_string_search_algorithm.html)
+
+Ctrl+F的查找算法
