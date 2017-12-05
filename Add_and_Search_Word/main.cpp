@@ -1,16 +1,23 @@
 #include <iostream>
 #include <vector>
+#include <set>
 #include <string>
 using namespace std;
 
 class WordDictionary{
 	public:
 		WordDictionary(){}
-		void addWord(string word){dict.push_back(word);}
+		void addWord(string word){
+			setDict.insert(word);
+			//dict.push_back(word);
+		}
 		bool isExist(string word){
-			for(auto _word: dict){
-				if(_word == word){return true;}
+			if(setDict.find(word) != setDict.end()){
+				return true;
 			}
+			//for(auto _word: dict){
+			//	if(_word == word){return true;}
+			//}
 			return false;
 		}
 		void backtrack(string word, int dep, int pos){
@@ -34,6 +41,7 @@ class WordDictionary{
 
 	private:
 		vector<string> dict;
+		set<string> setDict;
 		bool flag;
 };
 
