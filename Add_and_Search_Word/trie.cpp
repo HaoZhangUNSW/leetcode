@@ -18,7 +18,7 @@ class WordDictionary {
         		trie_root = NULL;
     		}
     		
-		// 回溯法查找单词word是否存在
+			// 回溯法查找单词word是否存在
     		bool dfs(TrieNode* node, string& word, int id) {
         		if (id == word.length()) {
             			if (true == node->end) {
