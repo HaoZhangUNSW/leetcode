@@ -7,10 +7,7 @@ class TrieNode {
 	public:
     		bool end;
     		TrieNode* next[26];
-    		TrieNode() {
-        		memset(next, 0, sizeof(next));
-        		end = false;
-    		}
+    		TrieNode():end(false){memset(next, 0, sizeof(next));}
 };
 
 class WordDictionary {
@@ -46,39 +43,38 @@ class WordDictionary {
 			}
 		    }
    
-		    // Adds a word into the data structure.
-		    void addWord(string word) {
-			if (trie_root == NULL) {
-			    trie_root = new TrieNode();
-			}
-			TrieNode* tmp = trie_root;
-			for (int i = 0; i < word.length(); ++i) {
-			    if (tmp->next[word[i] - 'a'] == NULL) {
-				tmp->next[word[i] - 'a'] = new TrieNode();
-			    }
-			    if (i < word.length() - 1) {
-				tmp = tmp->next[word[i] - 'a'];
-			    } else {
-				tmp->next[word[i] - 'a']->end = true;
-			    }
-			}
+	    // Adds a word into the data structure.
+	    void addWord(string word) {
+		if (trie_root == NULL) {
+		    trie_root = new TrieNode();
+		}
+		TrieNode* tmp = trie_root;
+		for (int i = 0; i < word.length(); ++i) {
+		    if (tmp->next[word[i] - 'a'] == NULL) {
+			tmp->next[word[i] - 'a'] = new TrieNode();
 		    }
-		    // Returns if the word is in the data structure. A word could
-		    // contain the dot character '.' to represent any one letter.
-		    bool search(string word) {
-			if (trie_root == NULL) {
-			    trie_root = new TrieNode();
-			}
-			
-			return dfs(trie_root, word, 0);
+		    if (i < word.length() - 1) {
+			tmp = tmp->next[word[i] - 'a'];
+		    } else {
+			tmp->next[word[i] - 'a']->end = true;
 		    }
+		}
+	    }
+	    // Returns if the word is in the data structure. A word could
+	    // contain the dot character '.' to represent any one letter.
+	    bool search(string word) {
+		if (trie_root == NULL) {
+		    trie_root = new TrieNode();
+		}
+		return dfs(trie_root, word, 0);
+	    }
 };
 
 int main(){
 	WordDictionary obj;
-	vector<string> words={"bad","dad","mad"};
+	vector<string> words={"bi","dad","done","dog"};
 	for(auto word:	words){obj.addWord(word);}
-	vector<string> rgxs = {"cad","pad","mad","b.m"};
+	vector<string> rgxs = {"","dad","d...","d.g","b.m"};
 	for(auto rgx:	rgxs){
 		cout << "-----------------------" << endl;
 		cout << obj.search(rgx) << endl;

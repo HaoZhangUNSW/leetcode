@@ -1,13 +1,11 @@
 class TrieNode {
 public:
 	// Initialize your data structure here.
-	
-	TrieNode(char input='#'):isEnd(false) {
-	}
+	TrieNode(char input='#'):isEnd(false) {}
 	bool isEnd;//需要一个end标志判断是否到达结尾
 	unordered_map<char, TrieNode*> child;//将一个节点下的所有节点存在unordered_map中
-
 };
+
 //插入：首先把根节点当做当前节点，然后从unordered_map中查找是否这个字符，如果找到则把找到的节点当做当前节点，没找到则新建一个节点插在原节点上，然后把新建的节点当做当前节点
 class Trie {
 public:
@@ -71,7 +69,6 @@ public:
 		}
 		return true;
 	}
-
 private:
 	TrieNode* root;
 };
