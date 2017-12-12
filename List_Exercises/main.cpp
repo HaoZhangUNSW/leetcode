@@ -61,6 +61,27 @@ void deleteDup(ListNode* &L){
 		p = p->next;
 	}
 }
+
+ListNode* deleteDuplicates(ListNode* head){
+	
+	//如果链表中原来有0个或者1个元素，不会有重复，直接返回
+	if(!head || !head->next){return head;}		
+	
+	//防止由于从链表第一个节点开始就有重复，导致链表头部被修改
+	ListNode* dummy = new ListNode(INT_MIN);
+	dummy->next = head;
+	
+	ListNode* prev = dummy;
+	while(prev->next){
+		ListNode* cur = prev->next;
+		while(cur->next && cur->next->val == cur->val){cur = cur->next;}
+		if(cur != prev->next){prev->next = cur->next;}
+		else{prev = prev->next;}
+	
+	}
+	return dummy->next;
+}
+
 ListNode* reverse(ListNode* L){
 	// p是L的跟屁虫，L从头到尾遍历一遍OK
 	ListNode* p = nullptr;
@@ -174,31 +195,21 @@ ListNode* removeNthFromEnd(ListNode* head, int n){
 	return new_head.next;
 }
 
+//ListNode* swapPairs(ListNode* head){
+//	//TODO	
+//}
+
 int main(){
 	
-	int _l2[] = {7,8,9,1,2,3};
-	int _l1[] = {1,2};
-	ListNode* l1 = nullptr;
+	int _l2[] = {1,2,3,3,4,4,5};
 	ListNode* l2 = nullptr;
-	createList(l1, _l1, sizeof(_l1)/sizeof(_l1[0]));
 	createList(l2, _l2, sizeof(_l2)/sizeof(_l2[0]));
-	//cout << "isParlindrome: " << isParlindrome(l1);	
-	
-	
-	//moveNode(&l1,&l2);
-	//deleteDup(l1);
-	//l3=reverse(l2);
-	//Solution slu;
-	//result = slu.mergeTwoLists(l1, l2);
-	
-	
 	ListNode* p = nullptr;
-	//p = getIntersectionNode(l2, l1);
-	p = removeNthFromEnd(l2,3);
+	l2 = deleteDuplicates(l2);
+	p = l2;
 	while(p){
 		cout << p -> val << " ";
 		p = p ->next;
 	}
-	//cout << endl;
 	return 0;
 }
