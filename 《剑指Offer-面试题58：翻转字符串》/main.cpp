@@ -3,6 +3,7 @@
  * C++中翻转字符串的三种方法：
  * 	https://blog.csdn.net/szu_aker/article/details/52422191
  *
+ * 类似的想法可以用在左旋转字符串.
  *
  * ***/
 
