@@ -1,3 +1,7 @@
+/***
+ * Recursive Method.
+ *
+ * ***/
 BinaryTreeNode* KthNode(BinaryTreeNode* pRoot, unsigned k){
 	if(pRoot == nullptr || k == 0){return nullptr;}
 	return KthNodeCore(pRoot, k);
