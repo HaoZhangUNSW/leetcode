@@ -145,6 +145,10 @@ Ctrl+F的查找算法
 
 41.[C++翻转字符串的三种方法](https://blog.csdn.net/szu_aker/article/details/52422191)
 
+42.[LeetCode股票买卖的最佳时间](https://blog.csdn.net/qq_24153697/article/details/78849806)
+
+总结了所有股票买卖的题型。
+
 
 
 
