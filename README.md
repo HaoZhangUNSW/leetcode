@@ -151,6 +151,8 @@ Ctrl+F的查找算法
 
 43.[链表问题集锦](https://mp.weixin.qq.com/s?__biz=MzI1MTIzMzI2MA==&mid=2650562683&idx=1&sn=c32b824a2061cf1f8076afa847007a43&chksm=f1fed6f8c6895fee0ad9c155f3e31f81e972e2299ca06a5e587d0a5f10ccbd6de229be498d8c&mpshare=1&scene=23&srcid=06308Q39U0wu6EDREVuKUgTH%23rd)
 
+44.[解决连通性问题的四种思路](https://www.jianshu.com/p/4ea4a672737c)
+
 
 
 
